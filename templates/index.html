@@ -9,8 +9,14 @@
         <h1>Search Page</h1>
         <form action="/search" method="post">
             <input type="text" name="search_query" placeholder="Enter your search query">
-            <input type="submit" value="Search">
+            <button type="submit">Search</button>
         </form>
+        {% if search_result %}
+            <div class="search-result">
+                <h2>Search Result:</h2>
+                <p>{{ search_result }}</p>
+            </div>
+        {% endif %}
     </div>
 </body>
 </html>
